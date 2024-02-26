@@ -10,5 +10,5 @@ I want to be even better that this since my skills could improve a lot (especial
 -sicco 😉
 
 Here's a couple screenshots (I don't want to deploy this small application)
-![image](https://github.com/JSaimon/my-wheather/assets/57638683/cd3c92e6-0394-4431-b3c0-3ad102f667a5)
-![image](https://github.com/JSaimon/my-wheather/assets/57638683/9660e079-808f-4b6e-8a17-2a91ff90633c)
+![image](https://github.com/JSaimon/my-wheather/assets/57638683/e02240fb-46ea-4808-a90b-4057493b02ae)
+![image](https://github.com/JSaimon/my-wheather/assets/57638683/8504f68a-f3d5-47e5-97bb-58b95f8d2051)
