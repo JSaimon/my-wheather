@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+import { Header } from "./components/Header";
+import { InfiniteSlider } from "./components/InfiniteSlider";
+import { CityForm } from "./components/CityForm";
+import { WeatherDisplay } from "./components/WeatherDisplay";
+import { Footer } from "./components/Footer";
 
-function App() {
+export default function App() {
+  const [selectedWeather, setSelectedWeather] = useState("");
+
+  function handleSelectedWeather(value) {
+    setSelectedWeather((weather) => (weather = value));
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <InfiniteSlider />
+      <div className="city-weather">
+        <CityForm
+          onChangeSelectedWeather={handleSelectedWeather}
+          weather={selectedWeather}
+        />
+        <WeatherDisplay weather={selectedWeather} />
+      </div>
+      <Footer />
     </div>
   );
 }
-
-export default App;

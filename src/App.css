@@ -1,38 +1,147 @@
+* {
+  font-family: "Kanit", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.title {
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 4vh;
+  color: #007fff;
+  margin-left: 5%;
+}
+
+.sub-title {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #007faa;
+}
+
 .App {
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+.infinite-slider {
+  background-color: red;
+  height: 7vh;
+}
+
+/*CAROUSEL*/
+.carousel-container {
+  overflow: hidden;
+  position: relative;
+  height: 10vh;
+  border-color: #4b5563;
+  width: 100%;
+}
+
+.carousel-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70%;
+  color: white;
+  background-color: paleturquoise;
+  font-size: 2vh;
+}
+
+.carousel-track {
+  display: flex;
+  position: absolute;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  gap: 16px;
+  width: 200%;
+  height: 100%;
+  animation: slide 20s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+/*INPUT*/
+.city-weather {
+  display: flex;
+}
+
+.city-form {
+  width: 100%;
+  height: 50%;
+  margin-top: 10%;
+  margin-left: 5%;
+  display: inline-block;
+}
+
+.form-row label {
+  width: 40%;
+  margin-right: 10%;
+  font-size: 2vh;
+  display: inline-block;
+}
+
+.form-row select {
+  height: 2.5vh;
+  border-radius: 5px;
+  width: 25%;
+  font-size: 1.5vh;
+  font-weight: 300;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.error-message {
+  font-size: 2vh;
+  font-weight: 400;
+  color: #e31837;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.info-message {
+  display: inline-block;
+  width: 100%;
+  height: 30%;
+  margin-top: 15%;
+  font-size: 2.5vh;
+  font-weight: 300;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.weather-display {
+  width: 100%;
+  height: 50%;
+  margin-top: 10%;
+  margin-right: 5%;
+  display: inline-block;
 }
 
-.App-link {
-  color: #61dafb;
+.weather-display h2 {
+  width: 100%;
+  display: inline-block;
+  margin-top: -15%;
+  text-align: center;
+  font-size: 25vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer {
+  text-align: center;
+}
+
+footer a {
+  text-decoration: underline dotted;
+  font-weight: 800;
 }
